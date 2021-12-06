@@ -1,182 +1,182 @@
 <html>
-<head><style>
-  
-body {
-	font-family: "Avenir Next", Helvetica, Arial, sans-serif;
-	padding:1em;
-	margin:auto;
-	width: 100%;
-	background:#fefefe;
-}
-	
-#container {
-	max-width: 48rem;
-	margin: 0 auto;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-weight: bold;
-}
-
-h1 {
-	color: #000000;
-	font-size: 28pt;
-}
-
-h2 {
-	border-bottom: 1px solid #CCCCCC;
-	color: #000000;
-	font-size: 24px;
-}
-
-h3 {
-	font-size: 18px;
-}
-
-h4 {
-	font-size: 16px;
-}
-
-h5 {
-	font-size: 14px;
-}
-
-h6 {
-	color: #777777;
-	background-color: inherit;
-	font-size: 14px;
-}
-
-hr {
-	height: 0.2em;
-	border: 0;
-	color: #CCCCCC;
-	background-color: #CCCCCC;
-}
-
-p, blockquote, ul, ol, dl, li, table, pre {
-	margin: 15px 0;
-}
-
-img {
-	max-width: 100%;
-}
-
-table {
-	border-collapse: collapse;
-	width: 100%;
-}
-
-table, th, td {
-	border: 1px solid #EAEAEA;
-	
-	border-radius: 3px;
-	padding: 5px;
-}
-
-tr:nth-child(even) {
-  background-color: #F8F8F8;
-}
-
-a, a:visited {
-	color: #4183C4;
-	background-color: inherit;
-	text-decoration: none;
-}
-
-#message {
-	border-radius: 6px;
-	border: 1px solid #ccc;
-	display:block;
-	width:100%;
-	height:60px;
-	margin:6px 0px;
-}
-
-button, #ws {
-	font-size: 10pt;
-	padding: 4px 6px;
-	border-radius: 5px;
-	border: 1px solid #bbb;
-	background-color: #eee;
-}
-
-code, pre, #ws, #message {
-	font-family: Monaco, monospace;
-	font-size: 10pt;
-	border-radius: 3px;
-	background-color: #F8F8F8;
-	color: inherit;
-}
-
-code {
-	border: 1px solid #EAEAEA;
-	margin: 0 2px;
-	padding: 0 5px;
-}
-
-pre {
-	border: 1px solid #CCCCCC;
-	overflow: auto;
-	padding: 4px 8px;
-}
-
-pre > code {
-	border: 0;
-	margin: 0;
-	padding: 0;
-}
-
-#ws { background-color: #f8f8f8; }
-
-.send { color:#77bb77; }
-.server { color:#7799bb; }
-.error { color:#AA0000; }
-</style>
-	</head><body>
-<div id="container">
-<h1 id="metamask-approval-hygiene">Metamask Approval Hygiene</h1>
-<h2 id="with-the-latest-badger-exploit-let-s-talk-about-metamask-approval-hygiene">With the latest Badger exploit let&#39;s talk about Metamask approval hygiene</h2>
-<h3 id="1-know-what-you-are-approving">1. Know what you are approving</h3>
-<blockquote>
-<h4 id="check-the-approved-address-yourself-br-do-not-trust-the-site-s-ui-take-the-address-manually-from-the-metamask-data-and-look-at-the-contract-on-etherscan-https-etherscan-io-br-if-you-are-on-another-network-you-may-want-to-use-polygonscan-https-polygonscan-com-bscscan-https-bscscan-com-solscan-https-solscan-io-or-the-blockexplorer-for-your-network-">Check the approved address yourself. <br/> Do not trust the site&#39;s UI. Take the address manually from the metamask data and look at the contract on <a href="https://etherscan.io">Etherscan</a>. <br /> If you are on another network you may want to use <a href="https//polygonscan.com">Polygonscan</a>, <a href="https://bscscan.com">BSCscan</a>, <a href="https://solscan.io">Solscan</a> or the blockexplorer for your network.</h4>
-<p><img src="https://user-images.githubusercontent.com/17516174/144847760-ed8e1951-e448-427c-a774-a4976d63a793.png" alt="image">
-<img src="https://user-images.githubusercontent.com/17516174/144847777-a36ea991-009c-4805-9995-533c4d49f444.png" alt="image"></p>
-<h4 id="things-to-pay-attention-to-at-this-point-">Things to pay attention to at this point.</h4>
-<ul>
-<li>Is the contract brand new?</li>
-<li>Who deployed it?</li>
-<li>Where did the funds come from to the deployer</li>
-<li>Is it a proxy? </li>
-</ul>
-</blockquote>
-<h3 id="2-know-how-much-you-are-approving">2. Know how much you are approving</h3>
-<blockquote>
-<h4 id="never-approved-more-than-you-plan-to-use-br-you-can-always-approve-more-in-the-future-">Never approved more than you plan to use. <br/> You can always approve more in the future.</h4>
-<p><img src="https://user-images.githubusercontent.com/17516174/144848997-d4e1589c-e9f7-4a45-8b87-73d5d030ca01.png" alt="image"><br/></p>
-<h4 id="yes-it-costs-a-few-more-but-so-is-psychological-help-once-you-will-get-rugged-br-">Yes, it costs a few $ more, but so is psychological help once you will get rugged.<br/></h4>
-<p><img src="https://user-images.githubusercontent.com/17516174/144849106-31491371-bbbc-48f4-8de0-0495c2b150ef.png" alt="image"></p>
-</blockquote>
-<h3 id="3-approvals-are-per-token">3. Approvals are per token</h3>
-<blockquote>
-<h4 id="so-if-you-approved-weth-on-some-shady-contract-only-your-weth-is-at-risk-due-to-that-approval-none-of-your-other-tokens-">So if you approved WETH on some shady contract only your WETH is at risk due to that approval, none of your other tokens.</h4>
-</blockquote>
-<h3 id="4-be-extra-tight-with-your-approvals-on-proxies">4. Be extra tight with your approvals on proxies</h3>
-<blockquote>
-<h4 id="you-are-not-only-approving-the-current-implementation-you-are-also-approving-the-next-implementation-and-the-next-implementation-and-the-next-implementation-br-this-means-that-if-the-code-is-changed-your-approval-will-still-be-valid-you-need-to-be-really-careful-here-">You are not only approving the current implementation, you are also approving the next implementation, and the next implementation, and the next implementation... <br/> This means that if the code is changed, your approval will still be valid, you need to be really careful here.</h4>
-</blockquote>
-<h3 id="5-periodic-review-of-all-your-approvals">5. Periodic review of all your approvals</h3>
-<blockquote>
-<h4 id="go-over-each-approval-and-verify-if-it-makes-sense-if-not-revoke-it-br-if-there-is-a-lot-of-stuff-you-are-unsure-about-see-what-is-less-of-a-hassle-revoking-all-the-odd-approvals-or-migrating-all-tokens-to-a-fresh-address-br-you-can-use-etherscan-s-https-etherscan-io-tokenapprovalchecker-polygonscan-s-https-polygonscan-com-tokenapprovalchecker-or-bscscan-s-https-bscscan-com-tokenapprovalchecker-token-approval-checker-at-the-time-of-writing-there-is-no-equivalent-service-for-solana-br-there-is-no-need-to-revoke-tokens-you-don-t-hold-anymore-and-don-t-plan-to-use-in-the-future-">Go over each approval and verify if it makes sense. If not, revoke it.<br/> If there is a lot of stuff you are unsure about, see what is less of a hassle, revoking all the odd approvals or migrating all tokens to a fresh address. <br/> You can use <a href="https://etherscan.io/tokenapprovalchecker">Etherscan&#39;s</a>, <a href="https://polygonscan.com/tokenapprovalchecker">Polygonscan&#39;s</a> or <a href="https://bscscan.com/tokenapprovalchecker">BSCscan&#39;s</a> token approval checker, at the time of writing, there is no equivalent service for Solana. <br/> There is no need to revoke tokens you don&#39;t hold anymore and don&#39;t plan to use in the future.</h4>
-</blockquote>
-<h3 id="6-you-should-have-a-good-reason-for-doing-an-infinite-approval">6. You should have a good reason for doing an infinite approval</h3>
-<blockquote>
-<h4 id="-it-should-not-be-your-default-br-br-not-sure-what-an-infinite-approval-looks-like-br-it-looks-like-this-"><em>It should not be your default!</em> <br/><br/> Not sure what an infinite approval looks like? <br/> It looks like this:</h4>
-<p><img src="https://user-images.githubusercontent.com/17516174/144851213-e3f9c554-eb3c-42d2-bba8-1d1ec620ef8b.png" alt="image"></p>
-</blockquote>
-<p><br/><br/></p>
-<h2 id="stay-safe-out-there-apes-">Stay safe out there apes.</h2>
-<h4 id="created-by-0xpufler-https-twitter-com-0xpufler-0xaffe6a78bd3f014da114c327a48bbec8cbcfbf3f-">Created by <a href="https://twitter.com/0xPUFLER">0xPUFLER</a> (0xAFFE6a78BD3F014Da114C327a48BBEC8CbcFbF3F)</h4>
-<h4 id="taken-from-https-twitter-com-cryptocatvc-status-1466380960648380419-s-20">Taken from <a href="https://twitter.com/CryptoCatVC/status/1466380960648380419?s=20">https://twitter.com/CryptoCatVC/status/1466380960648380419?s=20</a></h4>
-	<p><img src="http://placebear.com/200/200" alt="bears"></p>
-	</div></body></html>
+  <head>
+    <title>Metamask Approval Hygiene</title>
+    <meta property="og:title" content="Metamask Approval Hygiene" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="With the latest Badger exploit let's talk about Metamask approval hygiene. By 0xPUFLER"
+    />
+    <meta
+      property="og:url"
+      content="https://pufler.dev/metamask-approval-hygiene"
+    />
+    <meta name="twitter:title" content="Metamask Approval Hygiene" />
+    <meta
+      name="twitter:description"
+      content="With the latest Badger exploit let's talk about Metamask approval hygiene. By 0xPUFLER"
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="metamask-approval-hygiene">Metamask Approval Hygiene</h1>
+      <h2
+        id="with-the-latest-badger-exploit-let-s-talk-about-metamask-approval-hygiene"
+      >
+        With the latest Badger exploit let&#39;s talk about Metamask approval
+        hygiene
+      </h2>
+      <h3 id="1-know-what-you-are-approving">1. Know what you are approving</h3>
+      <blockquote>
+        <h5
+          id="check-the-approved-address-yourself-br-do-not-trust-the-site-s-ui-take-the-address-manually-from-the-metamask-data-and-look-at-the-contract-on-etherscan-https-etherscan-io-br-if-you-are-on-another-network-you-may-want-to-use-polygonscan-https-polygonscan-com-bscscan-https-bscscan-com-solscan-https-solscan-io-or-the-blockexplorer-for-your-network-"
+        >
+          Check the approved address yourself. <br />
+          Do not trust the site&#39;s UI. Take the address manually from the
+          metamask data and look at the contract on
+          <a href="https://etherscan.io">Etherscan</a>. <br />
+          If you are on another network you may want to use
+          <a href="https//polygonscan.com">Polygonscan</a>,
+          <a href="https://bscscan.com">BSCscan</a>,
+          <a href="https://solscan.io">Solscan</a> or the blockexplorer for your
+          network.
+        </h5>
+        <p class="flex">
+          <img
+            src="https://user-images.githubusercontent.com/17516174/144847760-ed8e1951-e448-427c-a774-a4976d63a793.png"
+            alt="image"
+          />
+          <img
+            src="https://user-images.githubusercontent.com/17516174/144847777-a36ea991-009c-4805-9995-533c4d49f444.png"
+            alt="image"
+          />
+        </p>
+        <h5 id="things-to-pay-attention-to-at-this-point-">
+          Things to pay attention to at this point.
+          <ul>
+            <li>Is the contract brand new?</li>
+            <li>Who deployed it?</li>
+            <li>Where did the funds come from to the deployer</li>
+            <li>Is it a proxy?</li>
+          </ul>
+        </h5>
+      </blockquote>
+      <h3 id="2-know-how-much-you-are-approving">
+        2. Know how much you are approving
+      </h3>
+      <blockquote>
+        <h5
+          id="never-approved-more-than-you-plan-to-use-br-you-can-always-approve-more-in-the-future-"
+        >
+          Never approved more than you plan to use. <br />
+          You can always approve more in the future.
+        </h5>
+        <p>
+          <img
+            src="https://user-images.githubusercontent.com/17516174/144848997-d4e1589c-e9f7-4a45-8b87-73d5d030ca01.png"
+            alt="image"
+          /><br />
+        </p>
+        <h5
+          id="yes-it-costs-a-few-more-but-so-is-psychological-help-once-you-will-get-rugged-br-"
+        >
+          Yes, it costs a few $ more, but so is psychological help once you will
+          get rugged.<br />
+        </h5>
+        <p>
+          <img
+            src="https://user-images.githubusercontent.com/17516174/144849106-31491371-bbbc-48f4-8de0-0495c2b150ef.png"
+            alt="image"
+          />
+        </p>
+      </blockquote>
+      <h3 id="3-approvals-are-per-token">3. Approvals are per token</h3>
+      <blockquote>
+        <h5
+          id="so-if-you-approved-weth-on-some-shady-contract-only-your-weth-is-at-risk-due-to-that-approval-none-of-your-other-tokens-"
+        >
+          So if you approved WETH on some shady contract only your WETH is at
+          risk due to that approval, none of your other tokens.
+        </h5>
+      </blockquote>
+      <h3 id="4-be-extra-tight-with-your-approvals-on-proxies">
+        4. Be extra tight with your approvals on proxies
+      </h3>
+      <blockquote>
+        <h5
+          id="you-are-not-only-approving-the-current-implementation-you-are-also-approving-the-next-implementation-and-the-next-implementation-and-the-next-implementation-br-this-means-that-if-the-code-is-changed-your-approval-will-still-be-valid-you-need-to-be-really-careful-here-"
+        >
+          You are not only approving the current implementation, you are also
+          approving the next implementation, and the next implementation, and
+          the next implementation... <br />
+          This means that if the code is changed, your approval will still be
+          valid, you need to be really careful here.
+        </h5>
+      </blockquote>
+      <h3 id="5-periodic-review-of-all-your-approvals">
+        5. Periodic review of all your approvals
+      </h3>
+      <blockquote>
+        <h5
+          id="go-over-each-approval-and-verify-if-it-makes-sense-if-not-revoke-it-br-if-there-is-a-lot-of-stuff-you-are-unsure-about-see-what-is-less-of-a-hassle-revoking-all-the-odd-approvals-or-migrating-all-tokens-to-a-fresh-address-br-you-can-use-etherscan-s-https-etherscan-io-tokenapprovalchecker-polygonscan-s-https-polygonscan-com-tokenapprovalchecker-or-bscscan-s-https-bscscan-com-tokenapprovalchecker-token-approval-checker-at-the-time-of-writing-there-is-no-equivalent-service-for-solana-br-there-is-no-need-to-revoke-tokens-you-don-t-hold-anymore-and-don-t-plan-to-use-in-the-future-"
+        >
+          Go over each approval and verify if it makes sense. If not, revoke
+          it.<br />
+          If there is a lot of stuff you are unsure about, see what is less of a
+          hassle, revoking all the odd approvals or migrating all tokens to a
+          fresh address. <br />
+          You can use
+          <a href="https://etherscan.io/tokenapprovalchecker">Etherscan&#39;s</a
+          >,
+          <a href="https://polygonscan.com/tokenapprovalchecker"
+            >Polygonscan&#39;s</a
+          >
+          or
+          <a href="https://bscscan.com/tokenapprovalchecker">BSCscan&#39;s</a>
+          token approval checker, at the time of writing, there is no equivalent
+          service for Solana. <br />
+          There is no need to revoke tokens you don&#39;t hold anymore and
+          don&#39;t plan to use in the future.
+        </h5>
+      </blockquote>
+      <h3 id="6-you-should-have-a-good-reason-for-doing-an-infinite-approval">
+        6. You should have a good reason for doing an infinite approval
+      </h3>
+      <blockquote>
+        <h5
+          id="-it-should-not-be-your-default-br-br-not-sure-what-an-infinite-approval-looks-like-br-it-looks-like-this-"
+        >
+          <em>It should not be your default!</em> <br /><br />
+          Not sure what an infinite approval looks like? <br />
+          It looks like this:
+        </h5>
+        <p>
+          <img
+            src="https://user-images.githubusercontent.com/17516174/144851213-e3f9c554-eb3c-42d2-bba8-1d1ec620ef8b.png"
+            alt="image"
+          />
+        </p>
+      </blockquote>
+      <p><br /><br /></p>
+      <h2 id="stay-safe-out-there-apes-">Stay safe out there apes.</h2>
+      <h5
+        id="created-by-0xpufler-https-twitter-com-0xpufler-0xaffe6a78bd3f014da114c327a48bbec8cbcfbf3f-"
+      >
+        Created by
+        <a href="https://twitter.com/0xPUFLER">0xPUFLER</a>
+        (0xAFFE6a78BD3F014Da114C327a48BBEC8CbcFbF3F)
+      </h5>
+      <h5
+        id="taken-from-https-twitter-com-cryptocatvc-status-1466380960648380419-s-20"
+      >
+        Taken from
+        <a
+          href="https://twitter.com/CryptoCatVC/status/1466380960648380419?s=20"
+          >https://twitter.com/CryptoCatVC/status/1466380960648380419?s=20</a
+        >
+      </h5>
+    </div>
+  </body>
+</html>
